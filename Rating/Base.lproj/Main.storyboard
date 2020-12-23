@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dnC-r9-Tbh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BOO-MJ-UIh">
+            <objects>
+                <tabBarController id="dnC-r9-Tbh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zaS-FK-8Fj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oFn-IK-Vtn" kind="relationship" relationship="viewControllers" id="rAL-Yr-MJo"/>
+                        <segue destination="HxJ-Hg-2ie" kind="relationship" relationship="viewControllers" id="xha-gn-AcB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbs-UQ-4FN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-640" y="-257"/>
+        </scene>
+        <!--Rating-->
+        <scene sceneID="M74-Rz-J0W">
+            <objects>
+                <tableViewController id="HxJ-Hg-2ie" customClass="BigRatingTableViewController" customModule="Rating" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ii6-gd-WJy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="TpP-Sd-eqi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="392" id="0Jj-mv-6P8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="392"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Jj-mv-6P8" id="SFf-te-Pmm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F23-XP-7Sa" customClass="RaingView" customModule="Rating" customModuleProvider="target">
+                                                    <rect key="frame" x="30" y="30" width="354" height="332"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F23-XP-7Sa" firstAttribute="leading" secondItem="SFf-te-Pmm" secondAttribute="leading" constant="30" id="5Qr-rX-K7i"/>
+                                                <constraint firstAttribute="trailing" secondItem="F23-XP-7Sa" secondAttribute="trailing" constant="30" id="6iJ-dR-2at"/>
+                                                <constraint firstAttribute="bottom" secondItem="F23-XP-7Sa" secondAttribute="bottom" constant="30" id="VEl-nP-3Jl"/>
+                                                <constraint firstItem="F23-XP-7Sa" firstAttribute="top" secondItem="SFf-te-Pmm" secondAttribute="top" constant="30" id="tks-G1-d20"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="7BC-vs-iGj">
+                                        <rect key="frame" x="0.0" y="420" width="414" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7BC-vs-iGj" id="soY-ZZ-dyT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVC-mh-Zsz">
+                                                    <rect key="frame" x="30" y="8" width="354" height="40"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AVC-mh-Zsz" firstAttribute="leading" secondItem="soY-ZZ-dyT" secondAttribute="leading" constant="30" id="22e-MS-sac"/>
+                                                <constraint firstAttribute="bottom" secondItem="AVC-mh-Zsz" secondAttribute="bottom" constant="8" id="Tlv-QZ-bag"/>
+                                                <constraint firstAttribute="trailing" secondItem="AVC-mh-Zsz" secondAttribute="trailing" constant="30" id="gCF-dw-bYn"/>
+                                                <constraint firstItem="AVC-mh-Zsz" firstAttribute="top" secondItem="soY-ZZ-dyT" secondAttribute="top" constant="8" id="jEE-84-hmG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZNx-qB-vG0">
+                                        <rect key="frame" x="0.0" y="476" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZNx-qB-vG0" id="dNs-eH-qFZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf4-Ut-Lxm">
+                                                    <rect key="frame" x="30" y="8" width="354" height="28"/>
+                                                    <state key="normal" title="Animate"/>
+                                                    <connections>
+                                                        <action selector="animateAction:" destination="HxJ-Hg-2ie" eventType="touchUpInside" id="G6I-yT-Kfh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Pf4-Ut-Lxm" secondAttribute="bottom" constant="8" id="ISg-TZ-hiu"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pf4-Ut-Lxm" secondAttribute="trailing" constant="30" id="U6g-9U-0fF"/>
+                                                <constraint firstItem="Pf4-Ut-Lxm" firstAttribute="top" secondItem="dNs-eH-qFZ" secondAttribute="top" constant="8" id="Xvb-B8-4hC"/>
+                                                <constraint firstItem="Pf4-Ut-Lxm" firstAttribute="leading" secondItem="dNs-eH-qFZ" secondAttribute="leading" constant="30" id="uFf-q9-p0t"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="HxJ-Hg-2ie" id="eTk-yq-7JG"/>
+                            <outlet property="delegate" destination="HxJ-Hg-2ie" id="J0B-m8-G8H"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Rating" image="star" catalog="system" id="RdR-tc-odm"/>
+                    <connections>
+                        <outlet property="ratingTextField" destination="AVC-mh-Zsz" id="KhJ-Rd-5zc"/>
+                        <outlet property="ratingView" destination="F23-XP-7Sa" id="ILt-TB-j4j"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufm-nE-Yp4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="41.517857142857139"/>
+        </scene>
+        <!--Items-->
+        <scene sceneID="zhk-Va-sW5">
+            <objects>
+                <tableViewController id="oFn-IK-Vtn" customClass="RatingsTableViewController" customModule="Rating" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5AC-pN-m87">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingTableViewCell" rowHeight="106" id="Idf-Qg-jWB" customClass="RatingTableViewCell" customModule="Rating" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Idf-Qg-jWB" id="De4-or-VNA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCW-Q2-Wdb" customClass="RaingView" customModule="Rating" customModuleProvider="target">
+                                            <rect key="frame" x="162" y="8" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="hWd-NQ-0h1"/>
+                                                <constraint firstAttribute="height" constant="90" id="oH8-oe-c2D"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="LCW-Q2-Wdb" secondAttribute="bottom" constant="8" id="OpW-wz-GeN"/>
+                                        <constraint firstItem="LCW-Q2-Wdb" firstAttribute="top" secondItem="De4-or-VNA" secondAttribute="top" constant="8" id="nO6-dd-DVL"/>
+                                        <constraint firstItem="LCW-Q2-Wdb" firstAttribute="centerX" secondItem="De4-or-VNA" secondAttribute="centerX" id="uWU-hZ-6Zn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ratingView" destination="LCW-Q2-Wdb" id="laU-hp-vZF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oFn-IK-Vtn" id="Byd-L9-OIT"/>
+                            <outlet property="delegate" destination="oFn-IK-Vtn" id="RjZ-hc-hgz"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Items" image="list.dash" catalog="system" id="jiP-su-Zal"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dz4-eP-fec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305.79710144927537" y="-676.33928571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
